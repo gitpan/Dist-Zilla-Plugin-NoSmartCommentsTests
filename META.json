@@ -1,5 +1,5 @@
 {
-   "abstract" : "Release tests for version numbers",
+   "abstract" : "Make sure no Smart::Comments escape into the wild",
    "author" : [
       "Chris Weyl <cweyl@alumni.drew.edu>"
    ],
@@ -46,13 +46,14 @@
       "bugtracker" : {
          "web" : "https://github.com/RsrchBoy/dist-zilla-plugin-nosmartcommentstests/issues"
       },
+      "homepage" : "http://search.cpan.org/dist/Dist-Zilla-Plugin-NoSmartCommentsTests/",
       "repository" : {
          "type" : "git",
          "url" : "git://github.com/RsrchBoy/dist-zilla-plugin-nosmartcommentstests.git",
          "web" : "https://github.com/RsrchBoy/dist-zilla-plugin-nosmartcommentstests"
       }
    },
-   "version" : "0.001",
+   "version" : "0.002",
    "x_Dist_Zilla" : {
       "plugins" : [
          {

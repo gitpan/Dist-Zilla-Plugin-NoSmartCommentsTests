@@ -1,9 +1,9 @@
 NAME
-    Dist::Zilla::Plugin::NoSmartCommentsTests - Release tests for version
-    numbers
+    Dist::Zilla::Plugin::NoSmartCommentsTests - Make sure no Smart::Comments
+    escape into the wild
 
 VERSION
-    version 0.001
+    version 0.002
 
 SYNOPSIS
     In "dist.ini":

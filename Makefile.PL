@@ -9,7 +9,7 @@ use ExtUtils::MakeMaker 6.31;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Release tests for version numbers',
+  'ABSTRACT' => 'Make sure no Smart::Comments escape into the wild',
   'AUTHOR' => 'Chris Weyl <cweyl@alumni.drew.edu>',
   'BUILD_REQUIRES' => {
     'Carp' => '0',
@@ -34,7 +34,7 @@ my %WriteMakefileArgs = (
     'Moose' => '0',
     'namespace::autoclean' => '0'
   },
-  'VERSION' => '0.001',
+  'VERSION' => '0.002',
   'test' => {
     'TESTS' => 't/*.t'
   }

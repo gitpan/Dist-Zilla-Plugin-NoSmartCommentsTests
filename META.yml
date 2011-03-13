@@ -1,5 +1,5 @@
 ---
-abstract: 'Release tests for version numbers'
+abstract: 'Make sure no Smart::Comments escape into the wild'
 author:
   - 'Chris Weyl <cweyl@alumni.drew.edu>'
 build_requires:
@@ -28,8 +28,9 @@ requires:
   perl: 5.006
 resources:
   bugtracker: https://github.com/RsrchBoy/dist-zilla-plugin-nosmartcommentstests/issues
+  homepage: http://search.cpan.org/dist/Dist-Zilla-Plugin-NoSmartCommentsTests/
   repository: git://github.com/RsrchBoy/dist-zilla-plugin-nosmartcommentstests.git
-version: 0.001
+version: 0.002
 x_Dist_Zilla:
   plugins:
     -

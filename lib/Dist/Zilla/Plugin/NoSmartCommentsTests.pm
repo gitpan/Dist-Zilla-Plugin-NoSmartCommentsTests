@@ -3,10 +3,10 @@ BEGIN {
   $Dist::Zilla::Plugin::NoSmartCommentsTests::AUTHORITY = 'cpan:RSRCHBOY';
 }
 BEGIN {
-  $Dist::Zilla::Plugin::NoSmartCommentsTests::VERSION = '0.001';
+  $Dist::Zilla::Plugin::NoSmartCommentsTests::VERSION = '0.002';
 }
 
-# ABSTRACT: Release tests for version numbers
+# ABSTRACT: Make sure no Smart::Comments escape into the wild
 
 use Moose;
 use namespace::autoclean;
@@ -23,11 +23,11 @@ __PACKAGE__->meta->make_immutable;
 
 =head1 NAME
 
-Dist::Zilla::Plugin::NoSmartCommentsTests - Release tests for version numbers
+Dist::Zilla::Plugin::NoSmartCommentsTests - Make sure no Smart::Comments escape into the wild
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 
