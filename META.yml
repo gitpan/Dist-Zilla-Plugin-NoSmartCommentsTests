@@ -23,6 +23,7 @@ meta-spec:
 name: Dist-Zilla-Plugin-NoSmartCommentsTests
 requires:
   Dist::Zilla::Plugin::InlineFiles: 0
+  Module::ScanDeps: 0
   Moose: 0
   namespace::autoclean: 0
   perl: 5.006
@@ -30,7 +31,7 @@ resources:
   bugtracker: https://github.com/RsrchBoy/dist-zilla-plugin-nosmartcommentstests/issues
   homepage: http://search.cpan.org/dist/Dist-Zilla-Plugin-NoSmartCommentsTests/
   repository: git://github.com/RsrchBoy/dist-zilla-plugin-nosmartcommentstests.git
-version: 0.002
+version: 0.003
 x_Dist_Zilla:
   plugins:
     -
@@ -193,6 +194,18 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::ReadmeAnyFromPod
       name: ReadmePodInRoot
       version: 0.103522
+    -
+      class: Dist::Zilla::Plugin::InstallRelease
+      name: InstallRelease
+      version: 0.006
+    -
+      class: Dist::Zilla::Plugin::Prereqs
+      config:
+        Dist::Zilla::Plugin::Prereqs:
+          phase: runtime
+          type: requires
+      name: Prereqs
+      version: 4.200004
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'

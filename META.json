@@ -22,6 +22,7 @@
       "runtime" : {
          "requires" : {
             "Dist::Zilla::Plugin::InlineFiles" : 0,
+            "Module::ScanDeps" : 0,
             "Moose" : 0,
             "namespace::autoclean" : 0,
             "perl" : "5.006"
@@ -53,7 +54,7 @@
          "web" : "https://github.com/RsrchBoy/dist-zilla-plugin-nosmartcommentstests"
       }
    },
-   "version" : "0.002",
+   "version" : "0.003",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
@@ -255,6 +256,22 @@
             "class" : "Dist::Zilla::Plugin::ReadmeAnyFromPod",
             "name" : "ReadmePodInRoot",
             "version" : "0.103522"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::InstallRelease",
+            "name" : "InstallRelease",
+            "version" : "0.006"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::Prereqs",
+            "config" : {
+               "Dist::Zilla::Plugin::Prereqs" : {
+                  "phase" : "runtime",
+                  "type" : "requires"
+               }
+            },
+            "name" : "Prereqs",
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",

@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::Plugin::NoSmartCommentsTests::AUTHORITY = 'cpan:RSRCHBOY';
 }
 BEGIN {
-  $Dist::Zilla::Plugin::NoSmartCommentsTests::VERSION = '0.002';
+  $Dist::Zilla::Plugin::NoSmartCommentsTests::VERSION = '0.003';
 }
 
 # ABSTRACT: Make sure no Smart::Comments escape into the wild
@@ -27,7 +27,7 @@ Dist::Zilla::Plugin::NoSmartCommentsTests - Make sure no Smart::Comments escape 
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 

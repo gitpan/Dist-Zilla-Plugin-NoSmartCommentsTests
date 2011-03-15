@@ -31,10 +31,11 @@ my %WriteMakefileArgs = (
   'NAME' => 'Dist::Zilla::Plugin::NoSmartCommentsTests',
   'PREREQ_PM' => {
     'Dist::Zilla::Plugin::InlineFiles' => '0',
+    'Module::ScanDeps' => '0',
     'Moose' => '0',
     'namespace::autoclean' => '0'
   },
-  'VERSION' => '0.002',
+  'VERSION' => '0.003',
   'test' => {
     'TESTS' => 't/*.t'
   }
