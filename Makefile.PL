@@ -13,13 +13,10 @@ my %WriteMakefileArgs = (
   'AUTHOR' => 'Chris Weyl <cweyl@alumni.drew.edu>',
   'BUILD_REQUIRES' => {
     'Carp' => '0',
-    'Dist::Zilla::App::Tester' => '0',
     'File::Find' => '0',
     'File::Temp' => '0',
     'Scalar::Util' => '0',
-    'Smart::Comments' => '0',
     'Test::More' => '0.94',
-    'Test::Output' => '0',
     'perl' => '5.004'
   },
   'CONFIGURE_REQUIRES' => {
@@ -31,11 +28,10 @@ my %WriteMakefileArgs = (
   'NAME' => 'Dist::Zilla::Plugin::NoSmartCommentsTests',
   'PREREQ_PM' => {
     'Dist::Zilla::Plugin::InlineFiles' => '0',
-    'Module::ScanDeps' => '0',
     'Moose' => '0',
     'namespace::autoclean' => '0'
   },
-  'VERSION' => '0.003',
+  'VERSION' => '0.004',
   'test' => {
     'TESTS' => 't/*.t'
   }

@@ -1,9 +1,18 @@
+#
+# This file is part of Dist-Zilla-Plugin-NoSmartCommentsTests
+#
+# This software is Copyright (c) 2011 by Chris Weyl.
+#
+# This is free software, licensed under:
+#
+#   The GNU Lesser General Public License, Version 2.1, February 1999
+#
 package Dist::Zilla::Plugin::NoSmartCommentsTests;
 BEGIN {
   $Dist::Zilla::Plugin::NoSmartCommentsTests::AUTHORITY = 'cpan:RSRCHBOY';
 }
 BEGIN {
-  $Dist::Zilla::Plugin::NoSmartCommentsTests::VERSION = '0.003';
+  $Dist::Zilla::Plugin::NoSmartCommentsTests::VERSION = '0.004';
 }
 
 # ABSTRACT: Make sure no Smart::Comments escape into the wild
@@ -27,7 +36,7 @@ Dist::Zilla::Plugin::NoSmartCommentsTests - Make sure no Smart::Comments escape 
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 SYNOPSIS
 
@@ -65,19 +74,11 @@ use strict;
 use warnings;
 
 use Test::More;
-use Module::ScanDeps;
-use ExtUtils::Manifest qw( maniread );
 
-my $manifest = maniread();
-my @files = grep m!^lib/.*\.pm$!, keys %$manifest;
-plan tests => scalar @files;
+eval "use Test::NoSmartComments";
+plan skip_all => 'Test::NoSmartComments required for checking comment IQ'
+    if $@;
 
-for my $file (@files) {
-
-    my $href = scan_deps(files => [ $file ], recurse => 0);
-
-    ### $href
-    is exists $href->{'Smart/Comments.pm'} => q{}, "$file w/o Smart::Comments";
-}
+no_smart_comments_in_all();
 
 1;

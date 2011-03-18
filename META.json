@@ -22,7 +22,6 @@
       "runtime" : {
          "requires" : {
             "Dist::Zilla::Plugin::InlineFiles" : 0,
-            "Module::ScanDeps" : 0,
             "Moose" : 0,
             "namespace::autoclean" : 0,
             "perl" : "5.006"
@@ -31,13 +30,10 @@
       "test" : {
          "requires" : {
             "Carp" : 0,
-            "Dist::Zilla::App::Tester" : 0,
             "File::Find" : 0,
             "File::Temp" : 0,
             "Scalar::Util" : 0,
-            "Smart::Comments" : 0,
             "Test::More" : "0.94",
-            "Test::Output" : 0,
             "perl" : "5.004"
          }
       }
@@ -54,38 +50,38 @@
          "web" : "https://github.com/RsrchBoy/dist-zilla-plugin-nosmartcommentstests"
       }
    },
-   "version" : "0.003",
+   "version" : "0.004",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
+            "class" : "Dist::Zilla::Plugin::NextRelease",
+            "name" : "NextRelease",
+            "version" : "4.200004"
+         },
+         {
             "class" : "Dist::Zilla::Plugin::Git::Check",
-            "name" : "@Git/Check",
+            "name" : "Git::Check",
             "version" : "1.110500"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::Commit",
-            "name" : "@Git/Commit",
+            "name" : "Git::Commit",
             "version" : "1.110500"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::Tag",
-            "name" : "@Git/Tag",
+            "name" : "Git::Tag",
             "version" : "1.110500"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::Push",
-            "name" : "@Git/Push",
+            "name" : "Git::Push",
             "version" : "1.110500"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::NextVersion",
             "name" : "Git::NextVersion",
             "version" : "1.110500"
-         },
-         {
-            "class" : "Dist::Zilla::Plugin::NextRelease",
-            "name" : "NextRelease",
-            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::GatherDir",
@@ -195,7 +191,12 @@
          {
             "class" : "Dist::Zilla::Plugin::ReportVersions",
             "name" : "ReportVersions",
-            "version" : "1.102460"
+            "version" : "1.110730"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::Prepender",
+            "name" : "Prepender",
+            "version" : "1.103470"
          },
          {
             "class" : "Dist::Zilla::Plugin::Authority",
@@ -243,6 +244,11 @@
             "version" : "4.200004"
          },
          {
+            "class" : "Dist::Zilla::Plugin::CheckPrereqsIndexed",
+            "name" : "CheckPrereqsIndexed",
+            "version" : "0.002"
+         },
+         {
             "class" : "Dist::Zilla::Plugin::GitHub::Meta",
             "name" : "GitHub::Meta",
             "version" : "0.06"
@@ -261,17 +267,6 @@
             "class" : "Dist::Zilla::Plugin::InstallRelease",
             "name" : "InstallRelease",
             "version" : "0.006"
-         },
-         {
-            "class" : "Dist::Zilla::Plugin::Prereqs",
-            "config" : {
-               "Dist::Zilla::Plugin::Prereqs" : {
-                  "phase" : "runtime",
-                  "type" : "requires"
-               }
-            },
-            "name" : "Prereqs",
-            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",

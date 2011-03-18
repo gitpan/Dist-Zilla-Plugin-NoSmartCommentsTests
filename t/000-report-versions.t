@@ -1,4 +1,13 @@
 #!perl
+#
+# This file is part of Dist-Zilla-Plugin-NoSmartCommentsTests
+#
+# This software is Copyright (c) 2011 by Chris Weyl.
+#
+# This is free software, licensed under:
+#
+#   The GNU Lesser General Public License, Version 2.1, February 1999
+#
 use warnings;
 use strict;
 use Test::More 0.94;
@@ -415,6 +424,7 @@ BEGIN {
       Test::Pod::Coverage
       Test::Portability::Files
       Test::YAML::Meta
+      open
     );
 
     my $Test = Test::Builder->new;
