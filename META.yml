@@ -27,33 +27,13 @@ resources:
   bugtracker: https://github.com/RsrchBoy/dist-zilla-plugin-nosmartcommentstests/issues
   homepage: http://search.cpan.org/dist/Dist-Zilla-Plugin-NoSmartCommentsTests/
   repository: git://github.com/RsrchBoy/dist-zilla-plugin-nosmartcommentstests.git
-version: 0.004
+version: 0.005
 x_Dist_Zilla:
   plugins:
     -
       class: Dist::Zilla::Plugin::NextRelease
       name: NextRelease
       version: 4.200004
-    -
-      class: Dist::Zilla::Plugin::Git::Check
-      name: Git::Check
-      version: 1.110500
-    -
-      class: Dist::Zilla::Plugin::Git::Commit
-      name: Git::Commit
-      version: 1.110500
-    -
-      class: Dist::Zilla::Plugin::Git::Tag
-      name: Git::Tag
-      version: 1.110500
-    -
-      class: Dist::Zilla::Plugin::Git::Push
-      name: Git::Push
-      version: 1.110500
-    -
-      class: Dist::Zilla::Plugin::Git::NextVersion
-      name: Git::NextVersion
-      version: 1.110500
     -
       class: Dist::Zilla::Plugin::GatherDir
       name: GatherDir
@@ -202,6 +182,26 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::InstallRelease
       name: InstallRelease
       version: 0.006
+    -
+      class: Dist::Zilla::Plugin::Git::Check
+      name: Git::Check
+      version: 1.110500
+    -
+      class: Dist::Zilla::Plugin::Git::Commit
+      name: Git::Commit
+      version: 1.110500
+    -
+      class: Dist::Zilla::Plugin::Git::Tag
+      name: Git::Tag
+      version: 1.110500
+    -
+      class: Dist::Zilla::Plugin::Git::Push
+      name: Git::Push
+      version: 1.110500
+    -
+      class: Dist::Zilla::Plugin::Git::NextVersion
+      name: Git::NextVersion
+      version: 1.110500
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'

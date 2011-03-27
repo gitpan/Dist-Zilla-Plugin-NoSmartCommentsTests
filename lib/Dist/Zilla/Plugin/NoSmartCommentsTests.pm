@@ -12,7 +12,7 @@ BEGIN {
   $Dist::Zilla::Plugin::NoSmartCommentsTests::AUTHORITY = 'cpan:RSRCHBOY';
 }
 BEGIN {
-  $Dist::Zilla::Plugin::NoSmartCommentsTests::VERSION = '0.004';
+  $Dist::Zilla::Plugin::NoSmartCommentsTests::VERSION = '0.005';
 }
 
 # ABSTRACT: Make sure no Smart::Comments escape into the wild
@@ -36,7 +36,7 @@ Dist::Zilla::Plugin::NoSmartCommentsTests - Make sure no Smart::Comments escape 
 
 =head1 VERSION
 
-version 0.004
+version 0.005
 
 =head1 SYNOPSIS
 
@@ -73,7 +73,7 @@ ___[ xt/release/no-smart-comments.t ]___
 use strict;
 use warnings;
 
-use Test::More;
+use Test::More 0.88;
 
 eval "use Test::NoSmartComments";
 plan skip_all => 'Test::NoSmartComments required for checking comment IQ'
@@ -81,4 +81,4 @@ plan skip_all => 'Test::NoSmartComments required for checking comment IQ'
 
 no_smart_comments_in_all();
 
-1;
+done_testing();
