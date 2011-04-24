@@ -12,7 +12,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.31
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.200004, CPAN::Meta::Converter version 2.110580'
+generated_by: 'Dist::Zilla version 4.200004, CPAN::Meta::Converter version 2.110930'
 license: lgpl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -27,7 +27,7 @@ resources:
   bugtracker: https://github.com/RsrchBoy/dist-zilla-plugin-nosmartcommentstests/issues
   homepage: http://search.cpan.org/dist/Dist-Zilla-Plugin-NoSmartCommentsTests/
   repository: git://github.com/RsrchBoy/dist-zilla-plugin-nosmartcommentstests.git
-version: 0.005
+version: 0.006
 x_Dist_Zilla:
   plugins:
     -
@@ -101,7 +101,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::CompileTests
       name: CompileTests
-      version: 1.103030
+      version: 1.110930
     -
       class: Dist::Zilla::Plugin::HasVersionTests
       name: HasVersionTests
@@ -117,7 +117,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::MinimumPerl
       name: MinimumPerl
-      version: 0.02
+      version: 1.002
     -
       class: Dist::Zilla::Plugin::ReportVersions
       name: ReportVersions
@@ -129,7 +129,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Authority
       name: Authority
-      version: 1.004
+      version: 1.005
     -
       class: Dist::Zilla::Plugin::MetaConfig
       name: MetaConfig
